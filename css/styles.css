@@ -384,7 +384,7 @@ ul {
 
 /* OUR CLIENTS */
 
-.title.clients {
+.title-clients {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -399,25 +399,25 @@ ul {
   align-items: center;
   justify-content: center;
 }
-
+/* 
 .list-client {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.list-client {
-  display: block;
-
-  padding: 16px 32px;
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-
-.list-client:hover {
+.clients-link:hover,
+.clients-link:focus {
   border-color: #2196f3;
 }
 
@@ -429,8 +429,8 @@ ul {
   fill: #afb1b8;
 }
 
-.list-client:hover .icon-clients,
-.list-client:focus .icon-clients {
+.clients-link:hover .icon-clients,
+.clients-link:focus .icon-clients {
   fill: #2196f3;
 }
 
@@ -459,19 +459,18 @@ ul {
 }
 
 .social-list .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 .link-social {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-list .link:not(:last-child) {
@@ -481,8 +480,8 @@ ul {
 .footer-icon {
   fill: #ffffff;
 }
-.social-list .link:hover,
-.social-list .link:focus {
+.link-social:hover,
+.link-social:focus {
   background-color: #2196f3;
 }
 
@@ -582,11 +581,6 @@ ul {
   box-shadow: none;
   text-decoration: none;
 }
-/* hover and focus for boxes if needed */
-.boxes:hover,
-.boxes:focus {
-  color: var(--blue-accent);
-}
 
 /*SUGGESTION-ITEMS*/
 
@@ -595,9 +589,12 @@ ul {
   margin-bottom: 30px;
   margin-right: 30px;
 }
+.suggestion-items .boxes {
+  display: block;
+}
 
-.suggestion-items .list-item:hover,
-.suggestion-items .list-item:focus {
+.suggestion-items .boxes:hover,
+.suggestion-items .boxes:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
